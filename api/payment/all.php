@@ -2,10 +2,8 @@
 
 require_once('../config.php');
 
-$customerUuid = $_POST['customerUuid'];
-
 try {
-    $sql = "SELECT * FROM internment_expenses WHERE customer='$customerUuid'";
+    $sql = "SELECT * FROM payments";
     
     $result = $db->query($sql);
     
@@ -18,4 +16,5 @@ try {
 catch (exception $e) {
     echo json_encode([]);
 }
+
 ?>

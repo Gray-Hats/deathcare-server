@@ -5,7 +5,7 @@ require_once('../config.php');
 $customerUuid = $_POST['customerUuid'];
 
 try {
-    $sql = "SELECT * FROM internment_expenses WHERE customer='$customerUuid'";
+    $sql = "SELECT * FROM package_expenses WHERE customer='$customerUuid'";
     
     $result = $db->query($sql);
     
