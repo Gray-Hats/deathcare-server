@@ -3,7 +3,6 @@
 require_once('../config.php');
 
 $uuid = $_POST['uuid'];
-$customerNo = $_POST['customerNo'];
 $lname = $_POST['lname'];
 $fname = $_POST['fname'];
 $mname = $_POST['mname'];
