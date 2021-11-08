@@ -5,5 +5,5 @@ module.exports = config = {
         password: 'password',
         database: 'deathcare_management_master',
     },
-    port: '3001',
+    port: '5001',
 }
