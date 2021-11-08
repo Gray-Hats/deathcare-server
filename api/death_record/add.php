@@ -3,7 +3,7 @@
 require_once('../config.php');
 
 $uuid = $_POST['uuid'];
-$record_no = $_POST['record_no'];
+$record_no = $_POST['recordNo'];
 $lname = $_POST['lname'];
 $fname = $_POST['fname'];
 $mname = $_POST['mname'];
@@ -12,10 +12,10 @@ $death_date = $_POST['death_date'];
 $address = $_POST['address'];
 $gender = $_POST['gender'];
 $relative = $_POST['relative'];
-$intermentDate = $_POST['intermentDate'];
+$internmentDate = $_POST['internmentDate'];
 
 try {
-    $sql = "INSERT INTO death_records VALUES('$uuid','$record_no','$lname','$fname','$mname','$birthday','$death_date','$address','$gender','$relative','$intermentDate')";
+    $sql = "INSERT INTO death_records VALUES('$uuid','$record_no','$lname','$fname','$mname','$birthday','$death_date','$address','$gender','$relative','$internmentDate')";
     
     $result = $db->query($sql);
     
