@@ -12,7 +12,7 @@ $uuid = $_POST['uuid'];
 $bucketName = $_POST['bucketName'];
 
 if($_FILES['file']) {
-    echo json_encode("No File");
+    echo json_encode(false);
     return;
 }
 
