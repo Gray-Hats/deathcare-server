@@ -11,6 +11,11 @@ if(!isset($_POST['uuid'])) {
 $uuid = $_POST['uuid'];
 $bucketName = $_POST['bucketName'];
 
+if($_FILES) {
+    echo json_encode("No File");
+    return;
+}
+
 if($bucketName) {
     $result = deleteFile($bucketName);
 }
