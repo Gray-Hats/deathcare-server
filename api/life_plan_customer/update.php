@@ -2,10 +2,10 @@
 
 require_once('../config.php');
 
-if(!isset($_POST['uuid'])) {
-    echo json_encode(false);
-    return;
-}
+// if(!isset($_POST['uuid'])) {
+//     echo json_encode(false);
+//     return;
+// }
 
 $uuid = $_POST['uuid'];
 $lname = $_POST['lname'];
