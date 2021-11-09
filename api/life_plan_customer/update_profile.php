@@ -11,26 +11,26 @@ if(!isset($_POST['uuid'])) {
 $uuid = $_POST['uuid'];
 $bucketName = $_POST['bucketName'];
 
-if($_FILES['file']) {
+if(isset($_FILES['file'])) {
     echo json_encode(false);
     return;
 }
 
 if($bucketName) {
-    $result = deleteFile($bucketName);
+    deleteFile($bucketName);
 }
 
-$uploadRes = uploadFile($_FILES, 'life_plan_customer/profile');
+$upload = uploadFile($_FILES, 'life_plan_customer/profile');
 
-if($uploadRes) {
+if($upload) {
 
     try {
-        $sql = "UPDATE life_plan_customer SET profile_url='$result->url', profile_bucket_name='$result->bucket_name' WHERE uuid='$uuid'";
+        $sql = "UPDATE life_plan_customer SET profile_url='$upload->url', profile_bucket_name='$upload->bucket_name' WHERE uuid='$uuid'";
         
         $result = $db->query($sql);
         
         if($result) {
-            echo json_encode($uploadRes);
+            echo json_encode($result);
         }
         else {
             echo json_encode(false);
