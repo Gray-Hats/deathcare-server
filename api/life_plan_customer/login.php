@@ -2,6 +2,11 @@
 
 require_once('../config.php');
 
+if(!isset($_POST['contactNo'])) {
+    echo json_encode(false);
+    return;
+}
+
 $contactNo = $_POST['contactNo'];
 $password = $_POST['password'];
 
