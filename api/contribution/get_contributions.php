@@ -2,6 +2,11 @@
 
 require_once('../config.php');
 
+if(!isset($_POST['customerNo'])) {
+    echo json_encode(false);
+    return;
+}
+
 $customerNo = $_POST['customerNo'];
 
 try {
