@@ -11,32 +11,34 @@ if(!isset($_POST['uuid'])) {
 $uuid = $_POST['uuid'];
 $bucketName = $_POST['bucketName'];
 
-if($bucketName) {
-    deleteFile($bucketName);
-}
+echo json_encode(true);
 
-$upload = uploadFile($_FILES, 'life_plan_customer/profile');
+// if($bucketName) {
+//     deleteFile($bucketName);
+// }
 
-if($upload) {
+// $upload = uploadFile($_FILES, 'life_plan_customer/profile');
 
-    try {
-        $sql = "UPDATE life_plan_customer SET profile_url='$upload->url', profile_bucket_name='$upload->bucket_name' WHERE uuid='$uuid'";
+// if($upload) {
+
+//     try {
+//         $sql = "UPDATE life_plan_customer SET profile_url='$upload->url', profile_bucket_name='$upload->bucket_name' WHERE uuid='$uuid'";
         
-        $result = $db->query($sql);
+//         $result = $db->query($sql);
         
-        if($result) {
-            echo json_encode($result);
-        }
-        else {
-            echo json_encode(false);
-        }
-    }
-    catch (exception $e) {
-        echo json_encode(false);
-    }
-}
-else {
-    echo json_encode(false);
-}
+//         if($result) {
+//             echo json_encode($result);
+//         }
+//         else {
+//             echo json_encode(false);
+//         }
+//     }
+//     catch (exception $e) {
+//         echo json_encode(false);
+//     }
+// }
+// else {
+//     echo json_encode(false);
+// }
 
 ?>
