@@ -11,11 +11,13 @@ if(!isset($_POST['uuid'])) {
 $uuid = $_POST['uuid'];
 $bucketName = $_POST['bucketName'];
 
-echo json_encode(true);
 
-// if($bucketName) {
-//     deleteFile($bucketName);
-// }
+
+if($bucketName) {
+    deleteFile($bucketName);
+}
+
+echo json_encode(true);
 
 // $upload = uploadFile($_FILES, 'life_plan_customer/profile');
 
