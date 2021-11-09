@@ -17,7 +17,7 @@ if($bucketName) {
     deleteFile($bucketName);
 }
 
-echo json_encode(true);
+echo json_encode($_FILES['file']);
 
 // $upload = uploadFile($_FILES, 'life_plan_customer/profile');
 
