@@ -11,9 +11,9 @@ $amount = $_POST['amount'];
 try {
     $sql = "INSERT INTO payments VALUES('$uuid', '$referenceNo', '$customer', '$date', $amount)";
     
-    $result = $db->query($sql);
+    //$result = $db->query($sql);
     
-    echo json_encode($result);
+    echo json_encode($sql);
 }
 catch (exception $e) {
     echo json_encode(false);
