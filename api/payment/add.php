@@ -7,10 +7,9 @@ $referenceNo = $_POST['referenceNo'];
 $customer = $_POST['customer'];
 $date = $_POST['date'];
 $amount = $_POST['amount'];
-$modeOfPayment = $_POST['modeOfPayment'];
 
 try {
-    $sql = "INSERT INTO payments VALUES('$uuid', '$referenceNo', '$customer', '$date', $amount, '$modeOfPayment')";
+    $sql = "INSERT INTO payments VALUES('$uuid', '$referenceNo', '$customer', '$date', $amount)";
     
     $result = $db->query($sql);
     
