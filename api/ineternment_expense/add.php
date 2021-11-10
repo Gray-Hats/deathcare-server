@@ -2,7 +2,7 @@
 
 require_once('../config.php');
 
-$customerUuid = $_POST['customerUuid'];
+$contractNo = $_POST['contractNo'];
 $hearse = $_POST['hearse'];
 $foods = $_POST['foods'];
 $refreshment = $_POST['refreshment'];
@@ -13,7 +13,7 @@ $other = $_POST['other'];
 $totalAmount = $_POST['totalAmount'];
 
 try {
-    $sql = "INSERT INTO internment_expenses VALUES('$customerUuid', $hearse, $foods, $refreshment, $balloons, $barangay, $staff, $other, $totalAmount)";
+    $sql = "INSERT INTO internment_expenses VALUES('$contractNo', $hearse, $foods, $refreshment, $balloons, $barangay, $staff, $other, $totalAmount)";
     
     $result = $db->query($sql);
 }

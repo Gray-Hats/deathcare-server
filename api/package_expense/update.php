@@ -2,7 +2,7 @@
 
 require_once('../config.php');
 
-$customerUuid = $_POST['customerUuid'];
+$contractNo = $_POST['contractNo'];
 $casket = $_POST['casket'];
 $van = $_POST['van'];
 $morgue = $_POST['morgue'];
@@ -14,7 +14,7 @@ $staff = $_POST['staff'];
 $totalAmount = $_POST['address'];
 
 try {
-    $sql = "UPDATE package_expenses SET casket=$casket, van=$van, morgue=$morgue, pormalin=$pormalin, embalmer=$embalmer, candle=$candle, water_container=$waterContainer, staff=$staff, total_amount=$totalAmount WHERE customer='$customerUuid'";
+    $sql = "UPDATE package_expenses SET casket=$casket, van=$van, morgue=$morgue, pormalin=$pormalin, embalmer=$embalmer, candle=$candle, water_container=$waterContainer, staff=$staff, total_amount=$totalAmount WHERE customer='$contractNo'";
     
     $result = $db->query($sql);
 }
