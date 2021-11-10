@@ -3,7 +3,7 @@
 require_once('../config.php');
 
 try {
-    $sql = "SELECT payments.*, funeral_customers.lname, funeral_customers.fname, funeral_customers.mname FROM payments INNER JOIN funeral_customers ON payments.customer=funeral_customers.uuid";
+    $sql = "SELECT payments.*, funeral_customers.lname, funeral_customers.fname, funeral_customers.mname FROM payments INNER JOIN funeral_customers ON payments.customer=funeral_customers.contract_no";
     
     $result = $db->query($sql);
     
