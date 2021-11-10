@@ -19,9 +19,10 @@ $address = $_POST['address'];
 $gender = $_POST['gender'];
 $totalAmount = $_POST['totalAmount'];
 $amountPaid = $_POST['amountPaid'];
+$package = $_POST['package'];
 
 try {
-    $sql = "INSERT INTO funeral_customers VALUES('$uuid','$customerNo','$lname','$fname','$mname','$contactNo','$dueDate','$downPayment','$address','$gender',$totalAmount,$amountPaid)";
+    $sql = "INSERT INTO funeral_customers VALUES('$uuid','$customerNo','$lname','$fname','$mname','$contactNo','$dueDate','$downPayment','$address','$gender',$totalAmount,$amountPaid,'$package')";
     
     $result = $db->query($sql);
 }
