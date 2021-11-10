@@ -15,9 +15,10 @@ $mname = $_POST['mname'];
 $contactNo = $_POST['contactNo'];
 $address = $_POST['address'];
 $gender = $_POST['gender'];
+$position = $_POST['position'];
 
 try {
-    $sql = "INSERT INTO employees ('$uuid', '$employeeNo', '$lname', '$fname', '$mname', '$contactNo', '$address', '$gender')";
+    $sql = "INSERT INTO employees ('$uuid', '$employeeNo', '$lname', '$fname', '$mname', '$contactNo', '$address', '$gender', '$position')";
     
     $result = $db->query($sql);
     

@@ -15,9 +15,10 @@ $mname = $_POST['mname'];
 $contactNo = $_POST['contactNo'];
 $address = $_POST['address'];
 $gender = $_POST['gender'];
+$position = $_POST['position'];
 
 try {
-    $sql = "UPDATE employees SET employee_no='$employeeNo', lname='$lname', fname='$fname', mname='$mname', contact_no='$contactNo', address='$address', gender='$gender' WHERE uuid='$uuid'";
+    $sql = "UPDATE employees SET employee_no='$employeeNo', lname='$lname', fname='$fname', mname='$mname', contact_no='$contactNo', address='$address', gender='$gender' position='$position' WHERE uuid='$uuid'";
     
     $result = $db->query($sql);
     
