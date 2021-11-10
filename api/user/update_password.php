@@ -11,7 +11,7 @@ $uuid = $_POST['uuid'];
 $password = $_POST['password'];
 
 try {
-    $sql = "UPDATE employees SET password='$password' WHERE uuid='$uuid'";
+    $sql = "UPDATE users SET password='$password' WHERE uuid='$uuid'";
     
     $result = $db->query($sql);
     

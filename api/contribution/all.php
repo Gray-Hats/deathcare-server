@@ -3,7 +3,7 @@
 require_once('../config.php');
 
 try {
-    $sql = "SELECT * FROM contributions";
+    $sql = "SELECT * FROM contributions  ORDER BY payment_date DESC";
     
     $result = $db->query($sql);
     

@@ -3,7 +3,7 @@
 require_once('../config.php');
 
 try {
-    $sql = "SELECT * FROM funeral_customers";
+    $sql = "SELECT * FROM funeral_customers ORDER BY contract_no DESC";
     
     $result = $db->query($sql);
     

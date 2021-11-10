@@ -4,7 +4,7 @@ require_once('../config.php');
 
 
 try {
-    $sql = "SELECT * FROM life_plan_customers";
+    $sql = "SELECT * FROM life_plan_customers  ORDER BY customer_no DESC";
     $result = $db->query($sql);
 
     $emparray = array();

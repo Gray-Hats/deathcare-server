@@ -8,17 +8,20 @@ if(!isset($_POST['uuid'])) {
 }
 
 $uuid = $_POST['uuid'];
-$username = $_POST['username'];
 
 try {
-    $sql = "UPDATE employees SET username='$username' WHERE uuid='$uuid'";
+    $sql = "SELECT * FROM users WHERE uuid='$uuid'";
     
     $result = $db->query($sql);
     
-    echo json_encode($result);
+    $emparray = array();
+    while($row = $result->fetch_assoc()) {
+        $emparray[] = $row;
+    }
+    echo json_encode($emparray);
 }
 catch (exception $e) {
-    echo json_encode(false);
+    echo json_encode([]);
 }
 
 ?>

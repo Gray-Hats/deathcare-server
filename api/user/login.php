@@ -11,7 +11,7 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 
 try {
-    $sql = "SELECT * FROM employees WHERE username='$username' AND password='$password'";
+    $sql = "SELECT * FROM users WHERE username='$username' AND password='$password'";
     
     $result = $db->query($sql);
     
