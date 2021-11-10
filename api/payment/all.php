@@ -8,7 +8,7 @@ try {
     $result = $db->query($sql);
     
     $emparray = array();
-    while($row = result->fetch_assoc()) {
+    while($row = $result->fetch_assoc()) {
         $emparray[] = $row;
     }
     echo json_encode($emparray);
