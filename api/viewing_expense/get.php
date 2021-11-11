@@ -9,12 +9,11 @@ try {
     
     $result = $db->query($sql);
     
-    echo json_encode($sql);
-    // $emparray = array();
-    // while($row = $result->fetch_assoc()) {
-    //     $emparray[] = $row;
-    // }
-    // echo json_encode($emparray);
+    $emparray = array();
+    while($row = $result->fetch_assoc()) {
+        $emparray[] = $row;
+    }
+    echo json_encode($emparray);
 }
 catch (exception $e) {
     echo json_encode([]);
