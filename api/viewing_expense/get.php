@@ -9,7 +9,7 @@ try {
     
     $result = $db->query($sql);
     
-    echo json_encode($result);
+    echo json_encode($sql);
     // $emparray = array();
     // while($row = $result->fetch_assoc()) {
     //     $emparray[] = $row;
