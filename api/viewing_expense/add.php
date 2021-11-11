@@ -14,7 +14,7 @@ $frame = $_POST['frame'];
 $staff = $_POST['staff'];
 $van = $_POST['van'];
 $refreshment = $_POST['refreshment'];
-$totalAmount = $_POST['address'];
+$totalAmount = $_POST['totalAmount'];
 
 try {
     $sql = "INSERT INTO viewing_expenses VALUES('$contractNo', $flowers, $tarpaulin, $frame, $staff, $van, $refreshment, $totalAmount)";
