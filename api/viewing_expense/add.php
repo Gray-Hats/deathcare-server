@@ -20,11 +20,12 @@ try {
     $sql = "INSERT INTO viewing_expenses VALUES('$contractNo', $flowers, $tarpaulin, $frame, $staff, $van, $refreshment, $totalAmount)";
     
     $result = $db->query($sql);
+    echo json_encode($sql);
 }
 catch (exception $e) {
-    $result = false;
+    echo json_encode(false);
 }
 
-echo json_encode($result);
+
 
 ?>
