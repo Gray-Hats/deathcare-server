@@ -21,11 +21,10 @@ try {
     $sql = "INSERT INTO internment_expenses VALUES('$contractNo', $hearse, $foods, $refreshment, $balloons, $barangay, $staff, $other, $totalAmount)";
     
     $result = $db->query($sql);
+    echo json_encode($result);
 }
 catch (exception $e) {
-    $result = false;
+    echo json_encode($e);
 }
-
-echo json_encode($result);
 
 ?>
