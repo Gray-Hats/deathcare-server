@@ -2,10 +2,10 @@
 
 require_once('../config.php');
 
-$customerUuid = $_POST['customerUuid'];
+$contractNo = $_POST['contractNo'];
 
 try {
-    $sql = "SELECT * FROM viewing_expenses WHERE customer='$customerUuid'";
+    $sql = "SELECT * FROM viewing_expenses WHERE customer='$contractNo'";
     
     $result = $db->query($sql);
     
