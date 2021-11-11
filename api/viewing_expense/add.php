@@ -19,8 +19,8 @@ $totalAmount = $_POST['totalAmount'];
 try {
     $sql = "INSERT INTO viewing_expenses VALUES('$contractNo', $flowers, $tarpaulin, $frame, $staff, $van, $refreshment, $totalAmount)";
     
-    // $result = $db->query($sql);
-    echo json_encode($sql);
+    $result = $db->query($sql);
+    echo json_encode($result);
 }
 catch (exception $e) {
     echo json_encode($e);
