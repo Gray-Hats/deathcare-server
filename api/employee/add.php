@@ -18,7 +18,7 @@ $gender = $_POST['gender'];
 $position = $_POST['position'];
 
 try {
-    $sql = "INSERT INTO employees ('$uuid', '$employeeNo', '$lname', '$fname', '$mname', '$contactNo', '$address', '$gender', '$position')";
+    $sql = "INSERT INTO employees VALUES('$uuid', '$employeeNo', '$lname', '$fname', '$mname', '$contactNo', '$address', '$gender', '$position')";
     
     $result = $db->query($sql);
     
