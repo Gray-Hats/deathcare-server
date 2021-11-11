@@ -3,7 +3,7 @@
 require_once('../config.php');
 
 try {
-    $sql = "SELECT COUNT(uuid), date_registered as count from funeral_customers GROUP BY date_registered ORDER BY date_registered";
+    $sql = "SELECT COUNT(uuid) as count, date_registered from funeral_customers GROUP BY date_registered ORDER BY date_registered";
     
     $result = $db->query($sql);
 
