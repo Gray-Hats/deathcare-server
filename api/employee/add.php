@@ -22,11 +22,7 @@ try {
     
     $result = $db->query($sql);
     
-    $emparray = array();
-    while($row = $result->fetch_assoc()) {
-        $emparray[] = $row;
-    }
-    echo json_encode($emparray);
+    echo json_encode($result);
 }
 catch (exception $e) {
     echo json_encode([]);
