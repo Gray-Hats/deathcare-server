@@ -2,6 +2,11 @@
 
 require_once('../config.php');
 
+if(!isset($_POST['contractNo'])) {
+    echo json_encode(false);
+    return;
+}
+
 $contractNo = $_POST['contractNo'];
 $hearse = $_POST['hearse'];
 $foods = $_POST['foods'];
