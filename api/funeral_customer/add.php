@@ -17,13 +17,12 @@ $dueDate = $_POST['dueDate'];
 $downPayment = $_POST['downPayment'];
 $address = $_POST['address'];
 $gender = $_POST['gender'];
-$totalAmount = $_POST['totalAmount'];
 $amountPaid = $_POST['amountPaid'];
 $package = $_POST['package'];
 $dateRegistered = $_POST['dateRegistered'];
 
 try {
-    $sql = "INSERT INTO funeral_customers VALUES('$uuid','$customerNo','$lname','$fname','$mname','$contactNo','$dueDate','$downPayment','$address','$gender',$totalAmount,$amountPaid,'$package', '$dateRegistered')";
+    $sql = "INSERT INTO funeral_customers VALUES('$uuid','$customerNo','$lname','$fname','$mname','$contactNo','$dueDate','$downPayment','$address','$gender',$amountPaid,'$package', '$dateRegistered')";
     
     $result = $db->query($sql);
 }

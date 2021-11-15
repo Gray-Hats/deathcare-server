@@ -16,12 +16,11 @@ $dueDate = $_POST['dueDate'];
 $downPayment = $_POST['downPayment'];
 $address = $_POST['address'];
 $gender = $_POST['gender'];
-$totalAmount = $_POST['totalAmount'];
 $amountPaid = $_POST['amountPaid'];
 $package = $_POST['package'];
 
 try {
-    $sql = "UPDATE funeral_customers SET lname='$lname', fname='$fname', mname='$mname', contact_no='$contactNo', due_date='$dueDate', down_payment='$downPayment', address='$address',gender='$gender', total_amount=$totalAmount, amount_paid=$amountPaid, package='$package' WHERE uuid='$uuid'";
+    $sql = "UPDATE funeral_customers SET lname='$lname', fname='$fname', mname='$mname', contact_no='$contactNo', due_date='$dueDate', down_payment='$downPayment', address='$address',gender='$gender', amount_paid=$amountPaid, package='$package' WHERE uuid='$uuid'";
     
     $result = $db->query($sql);
 }
