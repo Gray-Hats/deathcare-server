@@ -22,6 +22,6 @@ try {
     echo json_encode($emparray);
 }
 catch (exception $e) {
-    echo json_encode([]);
+    echo json_encode(false);
 }
 ?>
