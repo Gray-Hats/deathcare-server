@@ -13,7 +13,7 @@ $qty = $_POST['qty'];
 $dateAdded = $_POST['dateAdded'];
 
 try {
-    $sql = "UPDATE inventory name='$name', quantity='$qty', date_added='$dateAdded' WHERE uuid='$uuid'";
+    $sql = "UPDATE inventory name='$name', quantity='$qty' WHERE uuid='$uuid'";
     
     $result = $db->query($sql);
 }
