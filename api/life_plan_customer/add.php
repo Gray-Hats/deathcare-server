@@ -22,7 +22,7 @@ $lifePlanAmount = $_POST['lifePlanAmount'];
 $password = $_POST['password'];
 
 try {
-    $sql = "INSERT INTO life_plan_customers VALUES('$uuid','$customerNo','$lname','$fname','$mname', '$dateOfBirth', '$contactNo','$gender','$address','$dateRegistered','$status',$lifePlanAmount,'$password','','','','','','','','','','','','','','','')";
+    $sql = "INSERT INTO life_plan_customers VALUES('$uuid','$customerNo','$lname','$fname','$mname', '$dateOfBirth', '$contactNo','$gender','$address','$dateRegistered','$status',$lifePlanAmount,'$password','','','','','','','','','','','','','','','',0)";
     
     $result = $db->query($sql);
 }
